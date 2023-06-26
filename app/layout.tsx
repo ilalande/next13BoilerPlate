@@ -1,4 +1,5 @@
-import './globals.scss';
+import Header from '@components/header';
+import '@styles/globals.scss';
 
 // Defining font - doc from https://nextjs.org/docs/app/building-your-application/optimizing/fonts
 import { Inter } from 'next/font/google';
@@ -15,11 +16,11 @@ const inter = Inter({
 
 export const metadata = {
   title: {
-    default: 'MEMOMO',
-    template: '%s | MEMOMO',
+    default: 'My app',
+    template: '%s | My app',
   },
-  description: 'Création de tableaux personnels contenant des listes',
-  keywords: ['Next.js', 'React', 'Memo board', 'Tableau de mémos'],
+  description: 'Description',
+  keywords: ['Next.js', 'React', 'Keyword1', 'Keyword2'],
   authors: [
     {
       name: 'Juliane Casier',
@@ -41,11 +42,15 @@ export const metadata = {
     },
   },
 };
-const PrimaryLayout = ({ children }) => {
+const PrimaryLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang='fr-FR' className={inter.className}>
       <body>
-        <div className='mainWrapper'>{children}</div>
+        <div className='mainWrapper'>
+          <Header />
+
+          <div className='section'>{children}</div>
+        </div>
       </body>
     </html>
   );
