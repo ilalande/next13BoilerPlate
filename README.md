@@ -7,7 +7,7 @@
 
 ## General information
 
-This App is a boilerplate using Next13 JS (with App directory), Typescript, SCSS, axios.
+This App is a boilerplate using Next13 JS (with App directory), Typescript, SCSS, axios ans basic styles.
 
 ## Author
 
